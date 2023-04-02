@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black !important;
 }
 
 .App-logo {
@@ -35,4 +36,120 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+#search-button {
+  font-family: 'proxima-nova', sans-serif;
+  border-color: #1ed760 !important;
+  color: #1ed760;
+}
+#search-button:hover {
+  background-color: #1ed760 !important;
+  color: black;
+}
+#input-group {
+  width: 500px !important;
+}
+#artist-info {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+#artist-header {
+  color: white;
+  display: flex;
+  text-align: left;
+  opacity: 0.75;
+  width: 100% !important;
+  float: left !important;
+}
+ul {
+  list-style-type: none;
+}
+#artist-header-img {
+  right: 0;
+  opacity: 0.3;
+  z-index: 1;
+  object-fit: fill;
+  position: relative;
+}
+#artist-header-img > img {
+  border-radius: 10px;
+}
+#album-rows {
+  margin-top: 40px;
+}
+.row {
+  width: 100%;
+}
+.card-img {
+  width: 200px !important;
+  aspect-ratio: 1/1;
+}
+.card {
+  z-index: 2;
+  align-items: center;
+  --bs-card-bg: black !important;
+  color: white;
+  transition: all .2s ease-out;
+}
+.card:hover {
+  transition: all .2s ease-in;
+  transform: scale(1.1); 
+}
+.hide {
+  opacity: 0;
+}
+.card .hide {
+  visibility: hidden;
+  transition: opacity 0 1.5s;
+}
+.card:hover .hide {
+  visibility: visible !important;
+  color: white !important;
+  transition: opacity 1.5s;
+  opacity: 1;
+}
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  background-color: black !important;
+  border-color: #1ed760 !important;
+  color: lightgray;
+}
+#navbar {
+  font-family: 'proxima-nova', sans-serif;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #1ed760;
+  color: black;
+  height: 50px;
+  justify-items: center;
+  justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+#navbar #spotify-icon {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#navbar #navbar-text {
+  font-weight: 600;
+  margin-top: 5px;
+  color: black;
+}
+#left-side{
+  float: left;
+  display: inline-flex;
+}
+#container1 {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: center;
 }
