@@ -1,18 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, InputGroup, FormControl, Row, Card, Navbar} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
-import { CSSTransition, SwitchTransition } from "react-transition-group";
-
-const CLIENT_ID = 'a7817b009d4d4ccaa8cdb65ecfa4d8a7';
-const CLIENT_SECRET = '9002773a77a94f6fa990a7361104c955';
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
   const [accessToken, setAccessToken] = useState('');
   const [albums, setAlbums] = useState([]);
-  const [nonDuplicatedAlbums, setNonDupAlbums] = useState([]);
   const [searchedArtist, setsearchedArtist] = useState('');
   const [artist, setArtist] = useState('');
   const [artistImage, setArtistImage] = useState('');
@@ -24,7 +18,7 @@ function App() {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
+      body: 'grant_type=client_credentials&client_id=' + process.env.CLIENT_ID + '&client_secret=' + process.env.CLIENT_SECRET
     };
     fetch('https://accounts.spotify.com/api/token', authParams)
     .then((result) => result.json())
